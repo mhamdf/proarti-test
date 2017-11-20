@@ -1,9 +1,8 @@
 # Test
 ## Introduction
-For this test, you will be free to use any king of libs. The goal is to give us an idea on how you think
-what you know, how you understand problematics.
+For this test, you will be free to use any kind of libs. The goal is to give us an idea on your skills and how you resolve problematics.
 
-If you don't have the time to finish it, you can explain in the email how.
+If you don't have the time to finish it, you can explain in the email how you will have done it.
 
 Good luck and have fun ;)
 ## Exercise 1 - Load CSV file
