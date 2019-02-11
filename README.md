@@ -8,6 +8,7 @@ Good luck and have fun ;)
 ## Exercise 1 - Load CSV file
 To begin you have to load a CSV file in database.
 We must load this file with command line and through a web page.
+
 ## Exercise 2 - Create an API
 You have to create an rest API where we can:
 
@@ -16,12 +17,14 @@ You have to create an rest API where we can:
 * total rewards quantity by project
 * ... free to expose what you know
 
-***POST/PUT/PATCH***
+***POST/PUT***
 * donation linked to a user, reward, project
 * user
 * project
 
+You have to use ApiPlatform
+
 ## Exercise 3 - Create a front application
 You have to create one or multiple page to display what you loaded in database through the API.
 
-Bonus: If possible try to use Vue.js
+Bonus: use VueJS
