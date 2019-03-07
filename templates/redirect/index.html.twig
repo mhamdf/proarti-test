@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Load CSV !{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="mp-2">Load a CSV file</h1>
+    </div>
+    <div class="m-4">
+      {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <form enctype="multipart/form-data" action="{{path('loadcsv')}}" method="post">
+      <div class="card text-center">
+        <div class="card-header">
+          Upload a CSV file
+        </div>
+        <div class="card-body">
+            <h3>file uploader</h3>
+            <i class="fas fa-upload fa-6x m-4"></i> <br>
+            <span id='result' ></span><br>
+            <a href="#" class='btn  btn-primary upload-btn mt-4'>Choose a file</a>
+            <input type='file' name ='upload-file' id='upload-file'>
+        </div>
+        <div class="card-footer text-muted">
+          <button class='btn  btn-success' type='submit'>Load File</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript">
+  $('.upload-btn').on('click',function(){
+      $('#upload-file').click();
+    })
+  $('#upload-file').on('change',function(){
+    var files=$(this).get(0).files;
+     var result= document.createElement('p');
+      $('#result').html('your file size is: '+files[0].size/1000+' kbytes('+files[0].size+' bytes)');
+  })
+</script>
+{% endblock %}

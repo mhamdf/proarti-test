@@ -1,0 +1,13 @@
+#upload-file{
+  display:none;
+}
+.glyphicon{
+  font-size:4em
+}
+#container{
+  margin:8em
+}
+body {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
